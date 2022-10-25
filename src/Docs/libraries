@@ -1,0 +1,6 @@
+Python Libraries/Packages
+- pandas
+- matplotlib
+- PyQt5
+- umap-learn
+- pyinstaller (to generate Executable)
