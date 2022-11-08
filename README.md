@@ -1,1 +1,1 @@
-# DimensionReductionality
+# Dimensionality Reduction
