@@ -14,10 +14,19 @@
 # You should have received a copy of the GNU General Public License
 # along with DimReduceGUI.  If not, see <http://www.gnu.org/licenses/>.
 
-"""Run PyInstaller with settings in dim_reduce.spec to compile an executable application."""
+from PyQt5.QtWidgets import *
+from PyQt5 import QtGui
 
-import PyInstaller.__main__
+class DisplayWindow(QWidget):
+    """"""
+    def __init__(self, icon_file):
+        """Construct the main window and component widgets."""
+        QMainWindow.__init__(self)
+        super(DisplayWindow, self).__init__()
+        self.setWindowIcon(QtGui.QIcon(icon_file))
+        self.setWindowTitle("DimReduceGUI")
+    # end constructor
 
-PyInstaller.__main__.run([
-    'dim_reduce.spec'
-])
+
+
+# end DisplayWindow
