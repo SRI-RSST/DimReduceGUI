@@ -170,9 +170,9 @@ class piechart(object):
                     s1, mark = pie_slice(sum(parts[:x]), sum(parts[:x + 1]))
                     self.main_plot.axes.scatter(plot_data[0][cluster], plot_data[1][cluster], marker=mark,
                                                 s=s1 ** 2 * self.max_piesize * rsize[size_ind],
-                                                facecolor=colors(1/len(pt)*parts_ind[0][x]))
+                                                facecolor=colors(1/len(pt)*parts_ind[0][x]), alpha=0.7, zorder=4)
                 self.main_plot.axes.annotate(str(size_ind+1), xy=(plot_data[0][cluster], plot_data[1][cluster]), xycoords='axes fraction',
-             xytext=(plot_data[0][cluster]+max(rsize),plot_data[1][cluster]), textcoords='data', ha="left", va="bottom", bbox=dict(facecolor='orange', alpha=0.3), zorder=5).draggable()
+             xytext=(plot_data[0][cluster],plot_data[1][cluster]), textcoords='data', ha="left", va="bottom", bbox=dict(facecolor='orange', alpha=0.3), zorder=5).draggable()
             self.main_plot.fig.tight_layout()
             self.main_plot.axes.axis('off')
             self.main_plot.draw()
